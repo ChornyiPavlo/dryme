@@ -86,3 +86,15 @@
     
 })(jQuery);
 
+var contact = document.getElementById('contactForm');
+if (contact) {
+    contact.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var successMessage = document.getElementById('successMessage');
+        successMessage.style.display = 'block';
+        setTimeout(function () {
+            successMessage.style.display = 'none';
+        }, 5000);
+        this.reset();
+    });
+}
